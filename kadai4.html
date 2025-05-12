@@ -64,10 +64,12 @@
             // 課題4-1. ここにコード書く
             // 商品オブジェクトの生成
             console.log("a");
-            for (let i=0; i<item_list.length; i++) {
-                console.log("b");
+            for (let i = 0; i < items.length; i++) {
+                        item_list[i] = new Item(items[i].name, items[i].price, items[i].stock);
+                    console.log("b");
             }
             console.log("c");
+    
             // 課題4-2. ここにコードを書く
             // 商品表の作成
 
