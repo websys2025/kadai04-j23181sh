@@ -22,13 +22,13 @@
 
             // 商品用のクラス定義
             class Item {
-                static number = 1;
+                static number = 0;
                 constructor(name, price, stock) {
+                    Item.number++;
                     this.id = Item.number;
                     this.name = name;
                     this.price = price;
                     this.stock = stock;
-                    Item.number++;
                 }
 
                 // 商品一覧の表示関数
@@ -63,19 +63,23 @@
 
             // 課題4-1. ここにコード書く
             // 商品オブジェクトの生成
-
+            for (let i = 0; i < items.length; i++) {
+                    item_list[i] = new Item(items[i].name, items[i].price, items[i].stock);
+                    console.log(item_list[i]);
+            }
+    
             // 課題4-2. ここにコードを書く
             // 商品表の作成
 
             // クリックイベント時の購入処理の設定
-            for (let i=0; i<item_list.length; i++) {
+            /*for (let i=0; i<item_list.length; i++) {
                 // 課題4-3. ここにコードを書く
                 // 課題4-1, 4-2のコードが完成したら、以下のコメントを外す
                 //document.getElementById("button"+item_list[i].id).onclick = () => {
                 //    item_list[i].buyItem();
                 //}
             }
-            Item.showItemList(item_list);
+            Item.showItemList(item_list);*/
 
         </script>
     </body>
