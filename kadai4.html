@@ -1,4 +1,4 @@
-'button" + item_list[i].id + "'<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="utf-8">
@@ -53,6 +53,10 @@
 
                         
                         // 課題4-3. ここにコードを書く
+                       const changeStock = document.getElementById("stock" + this.id);
+                       if (changeStock) {
+                            changeStock.innerText = this.stock;
+                       }
                         // 在庫用のエレメントを抽出し、HTML内の個数を更新
                     } else console.log(this.name+"は商品の在庫がないため購入できません。");
                 }
@@ -86,6 +90,7 @@
                 document.getElementById("button" + item_list[i].id).onclick = () => {
                     item_list[i].buyItem();
                 };
+
 
             }
             Item.showItemList(item_list);
