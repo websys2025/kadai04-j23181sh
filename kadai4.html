@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+'button" + item_list[i].id + "'<!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="utf-8">
@@ -77,19 +77,21 @@
             // 課題4-2. ここにコードを書く
             // 商品表の作成
             for (let i = 0; i < items.length; i++) {
-                itemArea.innerHTML += "<tr><td>" +item_list[i].name + "</td><td>" +item_list[i].price + "</td><td>" +item_list[i].stock + "</td><td><button>購入</button></td></tr>";
+            itemArea.innerHTML += "<tr><td>" + items[i].name + "</td><td>" + items[i].price + "</td><td id='stock" + item_list[i].id + "'>" + items[i].stock + "</td><td><button id='button" + item_list[i].id + "'>購入</button></td></tr>";
             }
-
             // クリックイベント時の購入処理の設定
-            /*for (let i=0; i<item_list.length; i++) {
-                // 課題4-3. ここにコードを書く
-                // 課題4-1, 4-2のコードが完成したら、以下のコメントを外す
-                //document.getElementById("button"+item_list[i].id).onclick = () => {
-                //    item_list[i].buyItem();
-                //}
+            for (let i=0; i<item_list.length; i++) {
+                 //課題4-3. ここにコードを書く
+                 //課題4-1, 4-2のコードが完成したら、以下のコメントを外す
+                document.getElementById("button" + item_list[i].id).onclick = () => {
+                    item_list[i].buyItem();
+                };
+
             }
-            */
             Item.showItemList(item_list);
+
+            
+            
 
         </script>
     </body>
